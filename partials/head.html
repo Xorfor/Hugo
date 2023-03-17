@@ -1,0 +1,15 @@
+  <meta charset="utf-8">
+        <title>
+        {{- if .Page.IsHome -}}
+        {{- .Site.Title -}}
+        {{- else -}}
+        {{- .Title }} - {{ .Site.Title -}}
+        {{- end -}}
+        </title>
+{{- with .Keywords }}
+        <meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }}{{ end }}{{- $e -}}{{ end }}">
+{{- end }}
+{{ partial "meta_name.html" . -}}
+{{ partial "meta_property.html" . }}
+{{ partial "css.html" . }}
+{{ partial "favicon.html" . }}
