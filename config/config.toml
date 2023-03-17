@@ -1,6 +1,6 @@
 baseURL = ""
 LanguageCode = "nl"
-title = "...t"
+title = "..."
 theme = "..."
 relativeURLs = true
 canonifyURLs = false
