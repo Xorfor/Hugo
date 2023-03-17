@@ -8,9 +8,9 @@ The `head` part of the HTML page contains
 - `title`
 - `keywords`
 - `meta name` settings as defined in [meta_name.html](meta_name.html)
-- `meta property` settings as defined in [meta_property.html]()
-- settings for stylesheet(s) as defined in [css.html]()
-- `favicon` as specified in [favicon.html]()
+- `meta property` settings as defined in [meta_property.html](meta_property.html)
+- settings for stylesheet(s) as defined in [css.html](css.html)
+- `favicon` as specified in [favicon.html](favicon.html)
 
 This will result in the following HTML:
 
