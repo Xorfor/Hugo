@@ -4,13 +4,15 @@ These partials create the following components for a Bootstrap website:
 
 ## `head`
 The [`head`](head.html) part of the HTML page contains
-- `meta charset`<br/>The language will be used as defined in [config.toml](/config/config.toml)
-- `title` 
-- `keywords`
+- `meta charset`<br/>The language will be used as defined as `LanguageCode` in [config.toml](/config/config.toml)
+- `title`<br/>On the home page, the title will be the "site title" (`title` as specified in [config.toml](/config/config.toml)), on other pages it will be the "page title - site title", where "page title" is the `title` in the front matter section.
+- `keywords`<br/>As specified in `keywords`in the front matter section.
 - `meta name` settings as defined in [meta_name.html](meta_name.html)
 - `meta property` settings as defined in [meta_property.html](meta_property.html)
-- settings for stylesheet(s) as defined in [css.html](css.html)
-- `favicon` as specified in [favicon.html](favicon.html)
+- settings for stylesheet(s) as defined in [css.html](css.html).<br/>Timestamps are added with `?v=` to force the browser to refresh the cache.<br/>For Bootstrap, the used versions are specified in [config.toml](/config/config.toml) as:
+    - `bootstrapVersion`, which can be something like '5', or '5.1'.
+    - `iconsVersion`, which is the used version for the icon library.
+- `favicon` as specified in [favicon.html](favicon.html).<br/>Timestamp is added with `?v=` to force the browser to refresh the cache.
 
 This will result in the following HTML:
 
