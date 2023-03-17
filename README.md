@@ -1,8 +1,6 @@
 # Hugo
-A collection of shortcodes, I used/created for building my websites.
+A collection of partials, layouts and shortcodes, I used/created for building my websites.
 
-## Shortcodes
-| Shortcode | Description |
-| :---      | :---        |
-| [html](/shortcodes/html.html) | This template tells Hugo to simply render the inner content passed to your shortcode directly into the HTML of your site. |
-| [table](/shortcodes/table.html) | Add classes and caption to your markdown table. |
+- [Config](/config/config.html)
+- [Partials](/partials)
+- [Shortcodes](/shortcodes)
