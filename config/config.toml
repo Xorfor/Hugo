@@ -1,0 +1,23 @@
+baseURL = ""
+LanguageCode = "nl"
+title = "...t"
+theme = "..."
+relativeURLs = true
+canonifyURLs = false
+uglyurls = false
+disablePathToLower = false
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "sitemap"]
+enableRobotsTXT = true
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[frontmatter]
+  lastmod = ['lastmod', ':fileModTime', ':default']
+
+[params]
+  showComments = false
+  bootstrapVersion = "5.3.0-alpha1"
+  iconsVersion = "1"
+  placeholder = "https://dummyimage.com/"
+# placeholder = "https://via.placeholder.com/"
