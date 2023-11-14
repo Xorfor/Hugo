@@ -1,8 +1,11 @@
+{{-  if .Site.Params.showComments }}
+    {{- `<!-- themes\prent\layouts\shortcodes\table.html -->` | safeHTML }}
+{{- end -}}
 {{/********************************************************************************
 
     Usage:
 
-    {{< table table_class="table table-sm table-hover" thead_class="table-dark" caption="Caption">}}
+    {{< table table_class="table table-sm table-hover" thead_class="table-dark" tbody_class="table-group-divider" caption="Caption">}}
     |    # | Prent |
     | :--- | :---  |
     |      |       |
@@ -11,8 +14,10 @@
 
 ********************************************************************************/}}
 {{- $htmlTable := .Inner | markdownify }}  
+{{- $table_id := .Get "table_id" }}
 {{- $table_class := .Get "table_class" }}
 {{- $thead_class := .Get "thead_class" }}
+{{- $tbody_class := .Get "tbody_class" }}
 {{- if .Get "caption" }}
     {{- $caption := .Get "caption" }} 
     {{- $old_cap := "<table>" }}
@@ -20,8 +25,11 @@
     {{- $htmlTable = replace $htmlTable $old_cap $new_cap }} 
 {{- end }}
 {{- $old_class := "<table>" }}
-{{- $new_class := printf "<table class=\"%s\">" $table_class }}
+{{- $new_class := printf "<table id=\"%s\" class=\"%s\">" $table_id $table_class }}
 {{- $htmlTable = replace $htmlTable $old_class $new_class }}
+{{- $old_tbody := "<tbody>" }}
+{{- $new_tbody := printf "<tbody class=\"%s\">" $tbody_class }}
+{{- $htmlTable = replace $htmlTable $old_tbody $new_tbody }}
 {{- $old_thead := "<thead>" }}
 {{- $new_thead := printf "<thead class=\"%s\">" $thead_class }}
 {{- $htmlTable = replace $htmlTable $old_thead $new_thead }}
